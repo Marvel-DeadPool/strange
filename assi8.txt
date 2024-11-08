@@ -1,0 +1,38 @@
+UNIX BASIC COMMANDS :
+
+1) ls : Lists the contents of either the current directory or the directories listed on the command line.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ ls
+ a.out             Assignment_3.c   Assignment_6.c
+ Assignment_1.sh   Assignment_4.c  'Basic Shell Commands'
+ Assignment_2.sh   Assignment_5.c  'UNIX Basic Commands'
+
+2) mkdir : Allows you to create fresh directories in the terminal itself.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ mkdir NewFolder
+(New Folder was made in the SY_B_04 directory)
+
+3) cd : Changes the current working directory.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ cd NewFolder
+
+4) pwd : Just shows the present working directory.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ pwd
+/home/kkw/SY_B_04
+
+5) cp : Copies the contents of one file to another file or multiple files to another directory.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ cp Assignment_4.c Assignment_3.c
+
+6) rm : Helps you delete files and directories.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ rm test
+
+7) rmdir : Is used to delete permanently an empty directory. 
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ rmdir NewFolder
+
+8) grep : grep is a command-line utility for searching plain-text data sets for lines that match a regular expression.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ grep rm unix.txt
+	2) mkdir : Allows you to create fresh directories in the terminal itself.
+	6) rm : Helps you delete files and directories.
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ rm test
+	7) rmdir : Is used to delete permanently an empty directory. 
+	Example: kkw@kkw-HP-280-G2-MT-Legacy:~/SY_B_04$ rmdir NewFolder
+	
+
+

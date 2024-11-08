@@ -1,0 +1,96 @@
+Problem Statement:Execute following AWK operations on the text file  : 
+1 Print the lines which match the given pattern.  
+2 Splitting a Line Into Fields 
+3 To find the length of the longest line present in the file  
+4 Printing the lines with more than specified characters 
+*/
+
+arvind manager account 45000
+sunil clerk account 25000
+samarth manager sales 50000
+amit manager account 47000
+Vikas peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+surya director purchase 80000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{print}' new.txt
+arvind manager account 45000
+sunil clerk account 25000
+samarth manager sales 50000
+amit manager account 47000
+Vikas peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+surya director purchase 80000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '/manager/ {print}' new.txt 
+arvind manager account 45000
+samarth manager sales 50000
+amit manager account 47000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{print $1,$4}' new.txt
+arvind 45000
+sunil 25000
+samarth 50000
+amit 47000
+Vikas 15000
+deepak 23000
+sunil 13000
+surya 80000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{print NR,$0}' new.txt
+1 arvind manager account 45000
+2 sunil clerk account 25000
+3 samarth manager sales 50000
+4 amit manager account 47000
+5 Vikas peon sales 15000
+6 deepak clerk sales 23000
+7 sunil peon sales 13000
+8 surya director purchase 80000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk 'NR==3, NR==6 {print NR,$0}' new.txt3 samarth manager sales 50000
+4 amit manager account 47000
+5 Vikas peon sales 15000
+6 deepak clerk sales 23000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{print $1,$NF}' new.txt
+arvind 45000
+sunil 25000
+samarth 50000
+amit 47000
+Vikas 15000
+deepak 23000
+sunil 13000
+surya 80000
+
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{printf "%2d | %s\n",length,$0}' new.txt
+28 | arvind manager account 45000
+25 | sunil clerk account 25000
+27 | samarth manager sales 50000
+26 | amit manager account 47000
+22 | Vikas peon sales 15000
+24 | deepak clerk sales 23000
+22 | sunil peon sales 13000
+29 | surya director purchase 80000
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk '{if (length($0)>max) max=length($0)} END {print max}' new.txt
+29
+
+
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ awk 'length($0)>25' new.txt
+arvind manager account 45000
+samarth manager sales 50000
+amit manager account 47000
+surya director purchase 80000
+kkw@kkw-HP-280-G2-MT-Legacy:~/SY_70_OS$ 
+

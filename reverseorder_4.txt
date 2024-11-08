@@ -1,0 +1,22 @@
+echo "Enter a number: "
+read num
+
+rev=0
+
+original=$num
+
+while [ $num -gt 0 ]
+do
+    digit=$((num % 10))
+    rev=$((rev * 10 + digit))
+    num=$((num / 10))
+done
+
+echo "Input- $original" > file1.txt
+echo "Output- $rev" > file2.txt
+
+join -a 1 -a 2 file1.txt file2.txt > result.txt
+
+cat result.txt
+
+rm file1.txt file2.txt
